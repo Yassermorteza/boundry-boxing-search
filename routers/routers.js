@@ -6,6 +6,30 @@ const router = new Router();
 const log =console.log;
 
 router
+    .put('/sport/:id', async (ctx, next)=>{
+        try {
+            const id = ctx.params.id;
+            const body = ctx.request.body;
+            let sport = await SportModel.findById(id);
+            const newSport = {
+                sportName: body.sportName || sport.sportName,
+                geometry:{coordinates: [body.lng || sport.lng, body.lat || sport.lat], type:"Point"},
+                sportType: body.type || sport.sportType,
+                timestamp: Date.now()
+            };
+
+            sport = await SportModel.findOneAndUpdate({_id: id},
+                                                        {$set: newSport},
+                                                        {new:true ,multi: true},
+                                                        (err, sport)=>sport);
+
+            ctx.body = {status: "success", sport};
+
+        } catch (err) {
+            log(err);
+            ctx.throw(412, { err });
+        }
+    })
     .post('/sport', async (ctx, next)=>{
         try {
             const body = ctx.request.body
