@@ -23,10 +23,6 @@ mongoose.connect(db, {useNewUrlParser: true })
 
 app.use(bodyParser())
     .use(router.routes())
-    .use(router.allowedMethods())
-
-// app.on('error', (err, ctx) => {
-//     log.error('server error', err, ctx)
-// });
+    .use(router.allowedMethods());
 
 http.createServer(app.callback()).listen(port, ()=>console.log(`Server is running on port ${port}`));

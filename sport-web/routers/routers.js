@@ -6,6 +6,17 @@ const router = new Router();
 const log =console.log;
 
 router
+    .get('/search/:lnglat', async (ctx, next)=>{
+        try {
+            //Params format should be like: search/0,0,100,100  longitude, latitude 
+            const lnglat = ctx.params.lnglat.split(',');
+            const result = await SportModel.find( { "geometry.coordinates": { "$geoWithin": { "$box":[[ lnglat[0], lnglat[1] ], [lnglat[2], lnglat[3]]]}}}).exec();
+            ctx.body = {status:"success", result: result};
+        } catch (err) {
+            log(err);
+            ctx.throw(412, { err });
+        }
+    })
     .put('/sport/:id', async (ctx, next)=>{
         try {
             const id = ctx.params.id;
