@@ -20,7 +20,7 @@ const sportSchema = new Schema({
     }
 });
 
-sportSchema.index({ geometry: '2d' });
+sportSchema.index({ geometry: '2dsphere' });
 
 const Sport =  mongoose.model('sport', sportSchema);
 

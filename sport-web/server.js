@@ -10,7 +10,7 @@ const router = require("./routers/routers");
 const app = new Koa();
 
 const port = process.env.PORT || 5000;
-const db = "mongodb://127.0.0.1:27017/sport";
+const db = "mongodb://mongo:27017/sport";
 
 mongoose.Promise = global.Promise;
 mongoose.connect(db, {useNewUrlParser: true })
