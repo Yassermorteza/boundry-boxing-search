@@ -1,0 +1,35 @@
+{
+  "name": "sport-clubs",
+  "version": "1.0.0",
+  "description": "A geo location Api made on Docker, koajs and mongoDB",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yassermorteza/sport-clubs.git"
+  },
+  "keywords": [
+    "Koa",
+    "docker",
+    "mogoDB",
+    "geolocation",
+    "boundryBoxing"
+  ],
+  "author": "Yaser Morteza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Yassermorteza/sport-clubs/issues"
+  },
+  "homepage": "https://github.com/Yassermorteza/sport-clubs#readme",
+  "dependencies": {
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.2.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.2.0"
+  }
+}
