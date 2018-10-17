@@ -30,7 +30,7 @@ In case to run the app on your local machine the below software and environments
 ```
 Docker images(containers) you may need to pull from [https://hub.docker.com/](Docker Hub):
  ```
-    docker pull monog:latest
+    docker pull mongo:latest
     docker pull node:latest
  ```
 
