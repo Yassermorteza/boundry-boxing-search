@@ -28,9 +28,9 @@ In case to run the app on your local machine the below software and environments
     Docker version 18.06.0-ce, build 0ffa825
     Docker-compose version 1.22.0, build f46880f
 ```
-Docker images(containers) you may need to pull from [https://hub.docker.com/](Docker Hub):
+Docker images(containers) you may need to pull from [Docker Hub](https://hub.docker.com/):
  ```
-    docker pull monog:latest
+    docker pull mongo:latest
     docker pull node:latest
  ```
 
@@ -55,5 +55,4 @@ To check the enpoints you can open local url on port 5000 ```http://localhost:50
 
 ```/search/:lnglat``` is a GET route to search inside the collection by longitude and latitude, the parameter includes a sequence of  four lng and lat with comma separation, like ```search/0,0,100,100``` ```search/lng,lat,lng,lat```, it is made for boundry boxing search.
 
-
-
+________________________________________________________________________________________________________________________________
