@@ -1,4 +1,4 @@
-# Sport clubs 
+# Koa, Docker, MongoDB
 
 This is a blueprint of server code a sport clubes app, based on REST API. It's made on [KoaJs](https://koajs.com/),[MongoDB](https://www.mongodb.com/),[Docker](https://www.docker.com/),[Docker-compose](https://docs.docker.com/compose/).
 
